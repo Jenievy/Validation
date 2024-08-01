@@ -18,7 +18,7 @@
                         <th>Status</th>
                         <th>Description</th>
                         <th>Deadline</th>
-                        <th>Actions</th>
+                        <!-- <th>Actions</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -28,21 +28,17 @@
                         <td>{{ $user_task->status }}</td>
                         <td>{{ $user_task->description }}</td>
                         <td>{{ $user_task->deadline }}</td>
-                        <td>
-                            <a href="{{ url('user_task/' . $user_task->id . '/edit') }}" class="btn btn-outline-success btn-sm">Edit</a>
-                            <form action="{{ url('user_task/' . $user_task->id) }}" method="POST" style="display:inline;">
+                        <!-- <td>
+                            <a href="{{ url('user_task' . $user_task->id . '/edit') }}" class="btn btn-outline-success btn-sm">Edit</a>
+                            <form action="{{ url('user_task' . $user_task->id) }}" method="POST" style="display:inline;">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Delete this item?')">Delete</button>
                             </form>
-                        </td>
+                        </td> -->
                     </tr>
                     @endforeach
-                    <tr>
-                        <td colspan="8" class="text-right">
-                            {!! $user_tasks->links()!!}
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
