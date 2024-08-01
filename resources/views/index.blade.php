@@ -37,8 +37,12 @@
                             </form>
                         </td> -->
                     </tr>
-                    @endforeach
-                    
+                    @endforeach      
+                        <tr>
+                        <td colspan="8" class="text-right">
+                            {!! $user_tasks->links()!!}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
